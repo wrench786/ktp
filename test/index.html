@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Image Slider</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="slider-container">
+    <div class="slider" id="slider">
+      <div class="slide active">
+        <img src="../burger.jpg" alt="Burger">
+      </div>
+      <div class="slide">
+        <img src="../pizza.jpg" alt="Pizza">
+      </div>
+      <div class="slide">
+        <img src="../momo.jpg" alt="Momo">
+      </div>
+    </div>
+    <!-- Navigation Buttons -->
+    <a href="#" class="prev" id="prev">&#10094;</a>
+    <a href="#" class="next" id="next">&#10095;</a>
+    <!-- Dots Navigation -->
+    <div class="dots" id="dots">
+      <span class="dot active" data-slide="1"></span>
+      <span class="dot" data-slide="2"></span>
+      <span class="dot" data-slide="3"></span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
