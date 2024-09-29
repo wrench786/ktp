@@ -3,13 +3,13 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #F5F5F5; /* Off-white background */
+    background-color: #C4DAD2; /* Off-white background */
     color: #333333; /* Dark gray text for readability */
 }
 
 /* Navigation Bar */
 header {
-    background-color: #38B2AC; /* Teal for primary color */
+    background-color: #16423C; /* Teal for primary color */
     padding: 1rem;
     text-align: center;
 }
@@ -37,17 +37,18 @@ nav ul li a {
 }
 
 h2 {
+    margin-top: 0px;
     text-align: center;
     margin-bottom: 2rem;
-    font-size: 2rem;
-    color: #38B2AC; /* Teal for consistency */
+    font-size: 1.5rem;
+    color: #343131; /* Teal for consistency */
 }
 
 .card {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #FFEC99; /* Yellow background similar to the uploaded banner */
+    background-color: #6A9C89; /* Yellow background similar to the uploaded banner */
     border-radius: 15px;
     padding: 2rem;
     margin-bottom: 2rem;
@@ -68,7 +69,7 @@ h2 {
     padding: 1rem;
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #555555;
+    color: #1E201E;
 }
 
 /* Card Image Styling */
