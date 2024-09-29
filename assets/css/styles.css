@@ -43,7 +43,7 @@ h2 {
     color: #38B2AC; /* Teal for consistency */
 }
 
-.new-card {
+.card {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -56,19 +56,14 @@ h2 {
     overflow: hidden;
 }
 
-/* Reverse layout for alternating card designs */
-.new-card.reverse {
-    flex-direction: row-reverse;
-}
-
 /* Hover Effect */
-.new-card:hover {
+.card:hover {
     transform: translateY(-10px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 /* Card Text Styling */
-.new-card .card-text {
+.card .card-text {
     flex: 1;
     padding: 1rem;
     font-size: 1.1rem;
@@ -77,42 +72,69 @@ h2 {
 }
 
 /* Card Image Styling */
-.new-card .card-details {
+.card .card-details {
     flex: 1;
     padding: 1rem;
     display: flex;
     justify-content: center;
 }
 
-.new-card .card-details img {
+.card .card-details-people {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .card-details img {
+    max-width:300px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.card .card-details-people img {
     max-width:300px;
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
 
+.card .card-details-people h3{
+    margin-bottom:5px;
+}
+.card .card-details-people p{
+    margin-top: 0px;
+    margin-bottom:5px;
+}
+
 /* Hover Image Effect */
-.new-card:hover .card-details img {
+.card:hover .card-details img {
+    transform: scale(1.1); /* Zoom effect */
+}
+
+/* Hover Image Effect */
+.card:hover .card-details-people img {
     transform: scale(1.1); /* Zoom effect */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .new-card {
+    .card {
         flex-direction: column;
         text-align: center;
     }
 
-    .new-card .card-details img {
+    .card .card-details img {
         max-width: 280px;
     }
 }
 
 @media (max-width: 480px) {
-    .new-card {
+    .card {
         padding: 1rem;
     }
 
-    .new-card .card-details img {
+    .card .card-details img {
         max-width: 260px;
     }
 }
