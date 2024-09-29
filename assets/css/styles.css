@@ -108,6 +108,10 @@ h2 {
     margin-bottom:5px;
 }
 
+.reverse {
+    flex-direction: row-reverse;
+}
+
 /* Hover Image Effect */
 .card:hover .card-details img {
     transform: scale(1.1); /* Zoom effect */
@@ -120,12 +124,20 @@ h2 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .reverse {
+        flex-direction: row-reverse;
+    }
+
     .card {
         flex-direction: column;
         text-align: center;
     }
-
+    
     .card .card-details img {
+        max-width: 280px;
+    }
+
+    .card .card-details-people img {
         max-width: 280px;
     }
 }
@@ -136,6 +148,9 @@ h2 {
     }
 
     .card .card-details img {
+        max-width: 260px;
+    }
+    .card .card-details-people img {
         max-width: 260px;
     }
 }
