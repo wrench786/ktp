@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Navigation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Events Page Styles */
+        .events-page {
+            display: block;
+        }
+
+        .events-page h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .event-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        .event-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .event-info {
+            padding: 20px;
+        }
+
+        .event-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .event-description {
+            color: #666;
+            line-height: 1.4;
+        }
+
+        /* Gallery Page Styles */
+        .gallery-page {
+            display: none;
+        }
+
+        .gallery-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .back-button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #0056b3;
+        }
+
+        .gallery-title {
+            font-size: 2em;
+            color: #333;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .gallery-item-info {
+            padding: 15px;
+        }
+
+        .gallery-item-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .gallery-item-description {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .gallery-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .back-button {
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Events Page -->
+        <div class="events-page" id="eventsPage">
+            <h1>Events</h1>
+            <div class="events-grid">
+                <div class="event-card" onclick="showGallery('Art Exhibition')">
+                    <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=300&h=200&fit=crop" alt="Art Exhibition">
+                    <div class="event-info">
+                        <div class="event-title">Art Exhibition</div>
+                        <div class="event-description">Explore beautiful artworks from local and international artists in our curated exhibition.</div>
+                    </div>
+                </div>
+                
+                <div class="event-card" onclick="showGallery('Music Festival')">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&h=200&fit=crop" alt="Music Festival">
+                    <div class="event-info">
+                        <div class="event-title">Music Festival</div>
+                        <div class="event-description">Join us for an amazing night of live music performances from various genres.</div>
+                    </div>
+                </div>
+                
+                <div class="event-card" onclick="showGallery('Food Fair')">
+                    <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=300&h=200&fit=crop" alt="Food Fair">
+                    <div class="event-info">
+                        <div class="event-title">Food Fair</div>
+                        <div class="event-description">Taste delicious cuisines from around the world at our annual food festival.</div>
+                    </div>
+                </div>
+                
+                <div class="event-card" onclick="showGallery('Tech Conference')">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=300&h=200&fit=crop" alt="Tech Conference">
+                    <div class="event-info">
+                        <div class="event-title">Tech Conference</div>
+                        <div class="event-description">Learn about the latest technologies and innovations from industry experts.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery Page -->
+        <div class="gallery-page" id="galleryPage">
+            <div class="gallery-header">
+                <button class="back-button" onclick="showEvents()">← Back to Events</button>
+                <h1 class="gallery-title" id="galleryTitle">Gallery</h1>
+            </div>
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Gallery items will be inserted here dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Gallery data for different events
+        const galleryData = {
+            'Art Exhibition': [
+                {
+                    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=250&h=200&fit=crop',
+                    title: 'Abstract Sunset',
+                    description: 'Oil on canvas, 2023'
+                },
+                {
+                    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=250&h=200&fit=crop',
+                    title: 'Modern Sculpture',
+                    description: 'Bronze, 2023'
+                },
+                {
+                    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=250&h=200&fit=crop',
+                    title: 'Urban Life',
+                    description: 'Digital photography, 2023'
+                },
+                {
+                    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=250&h=200&fit=crop',
+                    title: 'Nature Study',
+                    description: 'Watercolor, 2023'
+                },
+                {
+                    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=250&h=200&fit=crop',
+                    title: 'Mixed Media Art',
+                    description: 'Various materials, 2023'
+                },
+                {
+                    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=250&h=200&fit=crop',
+                    title: 'Digital Creation',
+                    description: 'Digital art, 2023'
+                }
+            ],
+            'Music Festival': [
+                {
+                    image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=250&h=200&fit=crop',
+                    title: 'Main Stage',
+                    description: 'Rock performances'
+                },
+                {
+                    image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=250&h=200&fit=crop',
+                    title: 'Acoustic Corner',
+                    description: 'Intimate acoustic sets'
+                },
+                {
+                    image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=250&h=200&fit=crop',
+                    title: 'Festival Crowd',
+                    description: 'Audience enjoying music'
+                },
+                {
+                    image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=250&h=200&fit=crop',
+                    title: 'Live Performance',
+                    description: 'Local band performing'
+                },
+                {
+                    image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=250&h=200&fit=crop',
+                    title: 'DJ Performance',
+                    description: 'Electronic music set'
+                },
+                {
+                    image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=250&h=200&fit=crop',
+                    title: 'Behind the Scenes',
+                    description: 'Backstage moments'
+                }
+            ],
+            'Food Fair': [
+                {
+                    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=250&h=200&fit=crop',
+                    title: 'Italian Corner',
+                    description: 'Authentic Italian cuisine'
+                },
+                {
+                    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=250&h=200&fit=crop',
+                    title: 'Japanese Sushi',
+                    description: 'Fresh sushi and sashimi'
+                },
+                {
+                    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=250&h=200&fit=crop',
+                    title: 'BBQ Station',
+                    description: 'Grilled specialties'
+                },
+                {
+                    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=250&h=200&fit=crop',
+                    title: 'Sweet Treats',
+                    description: 'Various desserts'
+                },
+                {
+                    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=250&h=200&fit=crop',
+                    title: 'Coffee & Beverages',
+                    description: 'Fresh coffee and drinks'
+                },
+                {
+                    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=250&h=200&fit=crop',
+                    title: 'Food Trucks',
+                    description: 'Mobile food vendors'
+                }
+            ],
+            'Tech Conference': [
+                {
+                    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=250&h=200&fit=crop',
+                    title: 'Keynote Speaker',
+                    description: 'Opening presentation'
+                },
+                {
+                    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=250&h=200&fit=crop',
+                    title: 'AI Workshop',
+                    description: 'Hands-on AI session'
+                },
+                {
+                    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=250&h=200&fit=crop',
+                    title: 'Product Demos',
+                    description: 'Latest tech demonstrations'
+                },
+                {
+                    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=250&h=200&fit=crop',
+                    title: 'Networking Break',
+                    description: 'Connecting with peers'
+                },
+                {
+                    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=250&h=200&fit=crop',
+                    title: 'Panel Discussion',
+                    description: 'Industry experts panel'
+                },
+                {
+                    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=250&h=200&fit=crop',
+                    title: 'Tech Exhibition',
+                    description: 'Company booths'
+                }
+            ]
+        };
+
+        function showGallery(eventName) {
+            // Hide events page
+            document.getElementById('eventsPage').style.display = 'none';
+            
+            // Show gallery page
+            document.getElementById('galleryPage').style.display = 'block';
+            
+            // Update gallery title
+            document.getElementById('galleryTitle').textContent = eventName + ' Gallery';
+            
+            // Clear previous gallery content
+            const galleryGrid = document.getElementById('galleryGrid');
+            galleryGrid.innerHTML = '';
+            
+            // Add gallery items
+            const items = galleryData[eventName] || [];
+            items.forEach(item => {
+                const galleryItem = document.createElement('div');
+                galleryItem.className = 'gallery-item';
+                galleryItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.title}">
+                    <div class="gallery-item-info">
+                        <div class="gallery-item-title">${item.title}</div>
+                        <div class="gallery-item-description">${item.description}</div>
+                    </div>
+                `;
+                galleryGrid.appendChild(galleryItem);
+            });
+        }
+
+        function showEvents() {
+            // Hide gallery page
+            document.getElementById('galleryPage').style.display = 'none';
+            
+            // Show events page
+            document.getElementById('eventsPage').style.display = 'block';
+        }
+
+        // Optional: Handle browser back button
+        window.addEventListener('popstate', function(event) {
+            if (document.getElementById('galleryPage').style.display === 'block') {
+                showEvents();
+            }
+        });
+    </script>
+</body>
+</html>

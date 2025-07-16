@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Kashipur Tarun Projontho</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="teams.html">Teams</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero teams-hero">
+        <div class="hero-content">
+            <h1>Our Dedicated Team</h1>
+            <p>Meet the passionate individuals working together to create positive change in our community</p>
+            <a href="#leadership" class="btn">Meet the Team</a>
+        </div>
+    </section>
+
+    <!-- Leadership Team Section -->
+    <section id="leadership" class="section">
+        <h2>Leadership Team</h2>
+        <div class="card">
+            <div class="card-text">
+                <h3>Executive Committee</h3>
+                <p>Our leadership team brings together diverse expertise and unwavering commitment to serve our community. Each member contributes unique skills and perspectives to drive our mission forward.</p>
+                <div class="team-grid">
+                    <div class="team-leader">
+                        <img src="assets/images/toha.jpg" alt="Mohammad Toha">
+                        <h4>মোহাম্মদ তোহা</h4>
+                        <p class="position">সভাপতি</p>
+                        <p>Leading our initiatives since 2020 with a focus on education and community development.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-leader">
+                        <img src="assets/images/kawsar.jpg" alt="Kawsar Ahmed">
+                        <h4>কাওসার আহমেদ</h4>
+                        <p class="position">মহাসচিব</p>
+                        <p>Coordinating our programs and ensuring effective implementation of our initiatives.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Team Section -->
+    <section class="section">
+        <h2>Department Heads</h2>
+        <div class="card">
+            <div class="card-text">
+                <h3>Our Specialized Teams</h3>
+                <p>Our dedicated department heads work tirelessly to ensure the success of our various initiatives:</p>
+                <div class="department-grid">
+                    <div class="department">
+                        <div class="dept-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>Education Department</h4>
+                        <p class="position">শিক্ষা বিভাগ</p>
+                        <ul>
+                            <li>Scholarship programs</li>
+                            <li>Educational support</li>
+                            <li>Career guidance</li>
+                        </ul>
+                    </div>
+                    <div class="department">
+                        <div class="dept-icon">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                        <h4>Environmental Division</h4>
+                        <p class="position">পরিবেশ বিভাগ</p>
+                        <ul>
+                            <li>Tree planting initiatives</li>
+                            <li>Environmental awareness</li>
+                            <li>Clean-up drives</li>
+                        </ul>
+                    </div>
+                    <div class="department">
+                        <div class="dept-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h4>Community Support</h4>
+                        <p class="position">সমাজসেবা বিভাগ</p>
+                        <ul>
+                            <li>Relief distribution</li>
+                            <li>Healthcare support</li>
+                            <li>Community outreach</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Section -->
+    <section class="section">
+        <h2>Join Our Team</h2>
+        <div class="card">
+            <div class="card-text">
+                <h3>Become a Volunteer</h3>
+                <p>We're always looking for passionate individuals who want to make a difference. Join our team and help us create positive change in our community.</p>
+                <div class="benefits-grid">
+                    <div class="benefit">
+                        <i class="fas fa-users"></i>
+                        <h4>Team Collaboration</h4>
+                        <p>Work with like-minded individuals dedicated to community service</p>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>Skill Development</h4>
+                        <p>Gain valuable experience in project management and leadership</p>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-heart"></i>
+                        <h4>Community Impact</h4>
+                        <p>Make a real difference in people's lives</p>
+                    </div>
+                </div>
+                <a href="index.html#contact" class="btn">Join Us Today</a>
+            </div>
+            <div class="card-details">
+                <img src="assets/images/join-team.jpg" alt="Join Our Team">
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('nav')) {
+                navMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

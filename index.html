@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kashipur Tarun Projontho - Empowering Through Education</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="teams.html">Teams</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero home-hero">
+        <div class="hero-content">
+            <h1>Empowering Through Education</h1>
+            <p>Building a brighter future for our community through education, environmental care, and social support.</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>Our Mission</h2>
+        <div class="card home-card">
+            <div class="card-text">
+                <h3>Empowering Through Education</h3>
+                <p>At Kashipur Tarun Projontho, we believe in the power of education to transform lives. Our mission is to ensure that every child in our community has access to quality education, regardless of their financial circumstances.</p>
+                <p>We provide:</p>
+                <ul>
+                    <li>Educational support for underprivileged students</li>
+                    <li>Financial assistance for education</li>
+                    <li>Community development initiatives</li>
+                    <li>Environmental conservation projects</li>
+                </ul>
+            </div>
+            <div class="card-details">
+                <img src="assets/images/education.jpg" alt="Education Support">
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Slider Section -->
+    <section class="section">
+        <h2>Our Impact</h2>
+        <div class="simple-slider" id="simpleSlider">
+            <div class="simple-slides">
+                <img src="assets/images/yo.jpg" alt="Tree Planting Event" class="active">
+                <img src="assets/images/yo2.jpg" alt="Education Support">
+                <img src="assets/images/student.jpg" alt="Community Support">
+            </div>
+            <div class="simple-dots"></div>
+        </div>
+    </section>
+
+    <!-- Notable Figures Section -->
+    <section class="section">
+        <h2>Messages from Our Leaders</h2>
+        <div class="card">
+            <div class="card-text">
+                <p>"Our organization is committed to creating positive change in our community. Through education and environmental initiatives, we're building a better future for the next generation."</p>
+            </div>
+            <div class="card-details-people">
+                <img src="assets/images/toha.jpg" alt="Mohammad Toha">
+                <h3>মোহাম্মদ তোহা</h3>
+                <p>সভাপতি, কাশিপুর তরুণ প্রজন্ম</p>
+                <p>Leading our initiatives since 2020</p>
+            </div>
+        </div>
+
+        <div class="card reverse">
+            <div class="card-text">
+                <p>"Education is the foundation of progress. We're proud to support our community's youth in their educational journey and environmental awareness."</p>
+            </div>
+            <div class="card-details-people">
+                <img src="assets/images/kawsar.jpg" alt="Kawsar Ahmed">
+                <h3>কাওসার আহমেদ</h3>
+                <p>মহাসচিব, কাশিপুর তরুণ প্রজন্ম</p>
+                <p>Coordinating our educational programs</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Get In Touch</h2>
+        <div class="card">
+            <div class="card-text">
+                <h3>Contact Us</h3>
+                <p>Want to join our cause or need assistance? Reach out to us:</p>
+                <p><i class="fas fa-envelope"></i> Email: contact@ktporg.com</p>
+                <p><i class="fas fa-phone"></i> Phone: +880 1234-567890</p>
+                <p><i class="fas fa-map-marker-alt"></i> Location: Kashipur, Bangladesh</p>
+            </div>
+            <div class="card-details">
+                <img src="assets/images/contact.jpg" alt="Contact Us">
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('nav')) {
+                navMenu.classList.remove('active');
+            }
+        });
+
+        // Image Slider
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Change slide every 5 seconds
+        setInterval(nextSlide, 5000);
+    </script>
+</body>
+</html>
