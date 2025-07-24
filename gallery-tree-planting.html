@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tree Planting Drive 2024 - Gallery</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/gallery-tree-planting.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -16,7 +17,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="events.html">Events</a></li>
-                <li><a href="teams.html">Teams</a></li>
+                <li><a href="team.html">Teams</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
             </ul>
         </nav>
@@ -39,6 +40,7 @@
             <button class="btn" onclick="goBackToEvents()">Back to Events</button>
         </div>
     </section>
+    <script src="assets/js/gallery-tree-planting.js"></script>
     <script src="assets/js/script.js"></script>
     <script>
         function goBackToEvents() {
@@ -49,18 +51,5 @@
             }
         }
     </script>
-    <style>
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        .gallery-grid img {
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-        }
-    </style>
 </body>
 </html> 

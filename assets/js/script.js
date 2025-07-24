@@ -136,3 +136,20 @@ function scrollToSection(sectionId) {
   // Init
   goToSlide(0);
 })();
+
+// Mobile Menu Toggle (used in multiple pages)
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('nav ul');
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('nav')) {
+        navMenu.classList.remove('active');
+      }
+    });
+  }
+});

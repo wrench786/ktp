@@ -17,7 +17,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="events.html">Events</a></li>
-                <li><a href="teams.html">Teams</a></li>
+                <li><a href="team.html">Teams</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -115,38 +115,5 @@
     </section>
 
     <script src="assets/js/script.js"></script>
-    <script>
-        // Mobile Menu Toggle
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navMenu = document.querySelector('nav ul');
-
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('nav')) {
-                navMenu.classList.remove('active');
-            }
-        });
-
-        // Image Slider
-        const slides = document.querySelectorAll('.slide');
-        let currentSlide = 0;
-
-        function showSlide(index) {
-            slides.forEach(slide => slide.classList.remove('active'));
-            slides[index].classList.add('active');
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }
-
-        // Change slide every 5 seconds
-        setInterval(nextSlide, 5000);
-    </script>
 </body>
 </html>
