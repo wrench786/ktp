@@ -379,8 +379,10 @@ nav a:hover {
         margin-bottom: 2rem;
     }
 
-    .card-details, .card-details-people {
-        height: 250px;
+    .card-details {
+        min-height: 200px;
+        height: auto;
+        padding: 0.5rem;
     }
 
     .event img {
@@ -428,17 +430,18 @@ nav a:hover {
         order: 1;
     }
 
-    .card-details, .card-details-people {
+    .card-details {
         order: 2;
     }
 
-    .card.reverse .card-text {
-        order: 2;
-    }
-
-    .card.reverse .card-details, 
-    .card.reverse .card-details-people {
-        order: 1;
+    .card-details img {
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+        display: block;
+        border-radius: 12px;
     }
 }
 
@@ -866,7 +869,7 @@ nav a:hover {
 
 /* Responsive Resizable Card */
 .resizable-card-container {
-  max-width: 600px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -921,5 +924,20 @@ nav a:hover {
     flex: unset;
     width: 100%;
     padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .resizable-card-container {
+    max-width: 1400px;
+  }
+  .resizable-card .card-text {
+    padding: 2.5rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .resizable-card-container {
+    max-width: 1600px;
   }
 }
