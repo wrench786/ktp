@@ -863,3 +863,63 @@ nav a:hover {
     border-radius: 0;
   }
 }
+
+/* Responsive Resizable Card */
+.resizable-card-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.resizable-card {
+  width: 100%;
+  margin: 2rem auto 0 auto;
+  transition: width 0.3s;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  overflow: hidden;
+}
+.resizable-card .card-details {
+  flex: 1 1 50%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.resizable-card .card-details img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 12px;
+}
+.resizable-card .card-text {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  background: var(--white);
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  .resizable-card {
+    flex-direction: column;
+  }
+  .resizable-card .card-details {
+    flex: unset;
+    width: 100%;
+    min-height: 200px;
+    height: auto;
+  }
+  .resizable-card .card-text {
+    flex: unset;
+    width: 100%;
+    padding: 1.5rem;
+  }
+}
