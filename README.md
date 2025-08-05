@@ -4,7 +4,7 @@ A responsive website for Kashipur Tarun Projontho organization, focusing on educ
 
 ## Project Structure
 
-```
+``` 
 ktp-main/
 ├── index.html                 # Home page
 ├── team.html                  # Team members page
