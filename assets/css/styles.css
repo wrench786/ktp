@@ -10,8 +10,8 @@
     
     /* Page Specific Colors */
     --home-gradient: linear-gradient(135deg, #1a5f7a 0%, #2E8B57 100%);
-    --events-gradient: linear-gradient(135deg, #FF6B6B 0%, #ee5253 100%);
-    --teams-gradient: linear-gradient(135deg, #6c5ce7 0%, #a55eea 100%);
+    --events-gradient: linear-gradient(135deg, #2E8B57 0%, #185a9d 100%);
+    --teams-gradient: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
     
     --transition: all 0.3s ease;
     --past-event-accent: #FFB347;
@@ -143,7 +143,7 @@ nav a:hover {
 
 /* Events Page Specific */
 .events-hero::before {
-    background: linear-gradient(135deg, #1a5f7a 0%, #2E8B57 100%);
+    background: var(--events-gradient);
     opacity: 0.9;
 }
 
@@ -171,11 +171,11 @@ nav a:hover {
 }
 
 .team-member {
-    border-top: 4px solid #6c5ce7;
+    border-top: 4px solid var(--primary-color);
 }
 
 .team-member .position {
-    color: #6c5ce7;
+    color: var(--primary-color);
 }
 
 /* Cards with new styling */
