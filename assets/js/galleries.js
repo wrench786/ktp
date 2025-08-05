@@ -14,7 +14,6 @@ const galleries = {
       "https://i.postimg.cc/pLwc7yf5/8.jpg"
     ]
   },
-
   "tree-planting-2025": {
     title: "বৃক্ষরোপণ কর্মসূচি ২০২৫",
     description: "We planted 500 trees along the main roads of Kashipur, creating a greener and healthier environment for our community.",
@@ -24,15 +23,6 @@ const galleries = {
       "https://i.postimg.cc/HWQ1z9d1/1.jpg",
       "https://i.postimg.cc/wBSnc7rB/2.jpg",
       "https://i.postimg.cc/Pxj25Zc1/5.jpg"
-    ]
-  },
-  "education-support": {
-    title: "Education Support 2023",
-    description: "Supported 150 students with educational materials and scholarships, helping them achieve their academic goals.",
-    images: [
-      "assets/images/student.jpg",
-      "assets/images/burger.jpg",
-      "assets/images/kawsar.jpg"
     ]
   }
 }; 
