@@ -228,7 +228,8 @@ nav a:hover {
 /* Section headings with new styling */
 .section h2 {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
     font-size: clamp(1.8rem, 4vw, 2.5rem);
     color: var(--primary-color);
     position: relative;
@@ -372,7 +373,7 @@ nav a:hover {
     }
 
     .section {
-        padding: 3rem 1rem;
+        padding: 2rem 1rem;
     }
 
     .card {
@@ -394,32 +395,7 @@ nav a:hover {
     }
 }
 
-/* Image Slider */
-.slider {
-    position: relative;
-    height: 300px;
-    overflow: hidden;
-    border-radius: 10px;
-    margin: 2rem 0;
-}
 
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.slide.active {
-    opacity: 1;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
 @media (min-width: 769px) {
     .card {
@@ -721,78 +697,10 @@ nav a:hover {
     .past-event-card-content {
         padding: 1rem;
     }
-}
-
-/* Modern Mobile Slider Styles */
-.modern-slider {
-  position: relative;
-  max-width: 500px;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 18px;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.10);
-  background: #fff;
-  touch-action: pan-y;
-}
-
-.slider-track {
-  display: flex;
-  transition: transform 0.5s cubic-bezier(.4,1.4,.6,1);
-  will-change: transform;
-}
-
-.slide {
-  min-width: 100%;
-  transition: opacity 0.5s;
-  opacity: 0.6;
-  user-select: none;
-  pointer-events: none;
-}
-
-.slide.active {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.slide img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-  border-radius: 18px;
-}
-
-.slider-dots {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 1rem 0 0.5rem 0;
-}
-
-.slider-dot {
-  width: 10px;
-  height: 10px;
-  background: #bbb;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.3s;
-  border: none;
-  outline: none;
-}
-
-.slider-dot.active {
-  background: var(--primary-color, #1a5f7a);
-}
-
-@media (max-width: 600px) {
-  .modern-slider {
-    max-width: 100vw;
-    border-radius: 0;
-  }
-  .slide img {
-    height: 160px;
-    border-radius: 0;
-  }
+    /* Ensure Past Events section has same spacing as other sections */
+    .section {
+        padding: 2rem 1rem;
+    }
 }
 
 /* Simple Image Slider Styles - Modern, Immersive, User-Friendly */

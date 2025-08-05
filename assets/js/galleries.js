@@ -1,3 +1,5 @@
+// Gallery data for event-gallery.html
+// This object contains all the gallery information for different events
 const galleries = {
   "tree-planting": {
     title: "Tree Planting Drive 2024",
