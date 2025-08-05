@@ -16,7 +16,7 @@ const galleries = {
   },
   "tree-planting-2025": {
     title: "বৃক্ষরোপণ কর্মসূচি ২০২৫",
-    description: "We planted 500 trees along the main roads of Kashipur, creating a greener and healthier environment for our community.",
+    description: "আমরা কাশিপুরের প্রধান সড়কগুলিতে ৫০০টি গাছ রোপণ করেছি, যা আমাদের সম্প্রদায়ের জন্য একটি সবুজ ও স্বাস্থ্যকর পরিবেশ তৈরি করেছে। এই কর্মসূচির মাধ্যমে আমরা পরিবেশ সংরক্ষণে গুরুত্বপূর্ণ অবদান রেখেছি এবং ভবিষ্যৎ প্রজন্মের জন্য একটি সুন্দর পৃথিবী গড়ার লক্ষ্যে কাজ করছি।",
     images: [
       "https://i.postimg.cc/tRD29szV/6.jpg",
       "https://i.postimg.cc/43tWGw8J/4.jpg",
