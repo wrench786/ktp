@@ -12,6 +12,8 @@
     --home-gradient: linear-gradient(135deg, #1a5f7a 0%, #2E8B57 100%);
     --events-gradient: linear-gradient(135deg, #2E8B57 0%, #185a9d 100%);
     --teams-gradient: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+    --blood-gradient: linear-gradient(135deg, #206a5d 0%, #2c7873 100%);
+
     
     --transition: all 0.3s ease;
     --past-event-accent: #FFB347;
@@ -51,15 +53,29 @@ nav {
 
 .menu-toggle {
     display: none;
-    background: none;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     border: none;
-    font-size: 1.5rem;
-    color: var(--primary-color);
+    font-size: 1.2rem;
+    color: var(--white);
     cursor: pointer;
+    padding: 0.75rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(26, 95, 122, 0.3);
+    transition: var(--transition);
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     right: 1rem;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.menu-toggle:hover {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 6px 20px rgba(26, 95, 122, 0.4);
 }
 
 nav ul {
@@ -67,6 +83,14 @@ nav ul {
     justify-content: center;
     list-style: none;
     gap: 2rem;
+}
+
+nav ul.active {
+    display: flex;
+}
+
+nav li {
+    margin: 0;
 }
 
 nav a {
@@ -77,6 +101,7 @@ nav a {
     transition: var(--transition);
     padding: 0.5rem 1rem;
     border-radius: 4px;
+    display: block;
 }
 
 nav a:hover {
@@ -343,25 +368,44 @@ nav a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    header {
+        background-color: transparent;
+        box-shadow: none;
+        backdrop-filter: none;
+    }
+
     .menu-toggle {
-        display: block;
+        display: flex;
+        color: var(--white);
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        border: none;
+        box-shadow: 0 4px 15px rgba(26, 95, 122, 0.3);
+    }
+
+    .menu-toggle:hover {
+        background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+        box-shadow: 0 6px 20px rgba(26, 95, 122, 0.4);
     }
 
     nav ul {
         display: none;
         position: absolute;
         top: 100%;
-        left: 0;
         right: 0;
-        background: var(--white);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         flex-direction: column;
         padding: 1rem;
         text-align: center;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        min-width: 200px;
+        margin-top: 0.5rem;
+        gap: 0;
     }
 
     nav ul.active {
-        display: flex;
+        display: block;
     }
 
     nav li {

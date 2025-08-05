@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donors - Kashipur Tarun Projontho</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/blood-donors.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="team.html">Teams</a></li>
+                <li><a href="blood-donors.html">Blood Donors</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero blood-donors-hero">
+        <div class="hero-content">
+            <h1>Blood Donors Directory</h1>
+            <p>Connect with our generous blood donors who are ready to help in emergencies</p>
+            <a href="#donors" class="btn">View Donors</a>
+        </div>
+    </section>
+
+    <!-- Blood Donors Section -->
+    <section id="donors" class="section">
+        <h2>Blood Donors Directory</h2>
+        <div class="card">
+            <div class="card-text">
+                <h3>Find Blood Donors</h3>
+                <p>Browse our network of generous blood donors who are ready to help in emergencies. Use the filters below to find donors by blood group.</p>
+                
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="A+">A+</button>
+                    <button class="filter-btn" data-filter="A-">A-</button>
+                    <button class="filter-btn" data-filter="B+">B+</button>
+                    <button class="filter-btn" data-filter="B-">B-</button>
+                    <button class="filter-btn" data-filter="AB+">AB+</button>
+                    <button class="filter-btn" data-filter="AB-">AB-</button>
+                    <button class="filter-btn" data-filter="O+">O+</button>
+                    <button class="filter-btn" data-filter="O-">O-</button>
+                </div>
+                
+                <div class="donors-grid" id="donorsGrid">
+                    <!-- Donor cards will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Contact Section -->
+    <section class="section">
+        <h2>Emergency Contact</h2>
+        <div class="card">
+            <div class="card-text">
+                <h3>Emergency Blood Need?</h3>
+                <p>If you need blood urgently, contact our emergency coordinator immediately</p>
+                <div class="emergency-contacts">
+                    <div class="emergency-contact">
+                        <i class="fas fa-phone"></i>
+                        <span>+880 1712-345678</span>
+                        <button class="copy-btn" data-number="+8801712345678">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <div class="emergency-contact">
+                        <i class="fas fa-envelope"></i>
+                        <span>emergency@ktp.org</span>
+                        <button class="copy-btn" data-text="emergency@ktp.org">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Become a Donor Section -->
+    <section class="section">
+        <h2>Become a Blood Donor</h2>
+        <div class="card">
+            <div class="card-text">
+                <h3>Join Our Network</h3>
+                <p>Join our network of lifesavers and help those in need. Your donation can save multiple lives.</p>
+                <div class="donor-benefits">
+                    <div class="benefit">
+                        <i class="fas fa-heart"></i>
+                        <h4>Save Lives</h4>
+                        <p>Your blood donation can save up to 3 lives</p>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-certificate"></i>
+                        <h4>Get Certificate</h4>
+                        <p>Receive recognition for your contribution</p>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-users"></i>
+                        <h4>Join Community</h4>
+                        <p>Be part of our caring donor network</p>
+                    </div>
+                </div>
+                <a href="index.html#contact" class="btn">Register as Donor</a>
+            </div>
+            <div class="card-details">
+                <img src="https://i.postimg.cc/q7nYxJXk/blood-donor-image.jpg" alt="Become a Blood Donor">
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/blood-donors.js"></script>
+</body>
+</html> 
