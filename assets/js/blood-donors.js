@@ -7,7 +7,7 @@ const donors = [
         name: "আহমেদ রহমান",
         age: 28,
         bloodGroup: "A+",
-        mobile: "+880 1712-123456",
+        mobile: "+8801712-123456",
         lastDonation: "2024-01-15",
         location: "Kashipur",
         available: true
@@ -17,7 +17,7 @@ const donors = [
         name: "ফাতেমা বেগম",
         age: 32,
         bloodGroup: "B+",
-        mobile: "+880 1812-234567",
+        mobile: "+8801812-234567",
         lastDonation: "2024-02-20",
         location: "Kashipur",
         available: true
@@ -27,7 +27,7 @@ const donors = [
         name: "মোহাম্মদ আলী",
         age: 25,
         bloodGroup: "O+",
-        mobile: "+880 1912-345678",
+        mobile: "+8801912-345678",
         lastDonation: "2024-01-30",
         location: "Kashipur",
         available: true
@@ -37,7 +37,7 @@ const donors = [
         name: "সাবরিনা আক্তার",
         age: 29,
         bloodGroup: "AB+",
-        mobile: "+880 1612-456789",
+        mobile: "+8801612-456789",
         lastDonation: "2024-02-10",
         location: "Kashipur",
         available: true
@@ -47,7 +47,7 @@ const donors = [
         name: "রফিক আহমেদ",
         age: 35,
         bloodGroup: "A-",
-        mobile: "+880 1512-567890",
+        mobile: "+8801512-567890",
         lastDonation: "2024-01-25",
         location: "Kashipur",
         available: true
@@ -57,7 +57,7 @@ const donors = [
         name: "নাসরিন সুলতানা",
         age: 27,
         bloodGroup: "B-",
-        mobile: "+880 1412-678901",
+        mobile: "+8801412-678901",
         lastDonation: "2024-02-05",
         location: "Kashipur",
         available: true
@@ -67,7 +67,7 @@ const donors = [
         name: "ইমরান হোসেন",
         age: 31,
         bloodGroup: "O-",
-        mobile: "+880 1312-789012",
+        mobile: "+8801312-789012",
         lastDonation: "2024-01-20",
         location: "Kashipur",
         available: true
@@ -77,7 +77,7 @@ const donors = [
         name: "তানিয়া খান",
         age: 26,
         bloodGroup: "AB-",
-        mobile: "+880 1212-890123",
+        mobile: "+8801212-890123",
         lastDonation: "2024-02-15",
         location: "Kashipur",
         available: true
@@ -87,7 +87,7 @@ const donors = [
         name: "শাহরিয়ার ইসলাম",
         age: 33,
         bloodGroup: "A+",
-        mobile: "+880 1112-901234",
+        mobile: "+8801112-901234",
         lastDonation: "2024-01-10",
         location: "Kashipur",
         available: true
@@ -97,7 +97,7 @@ const donors = [
         name: "মেহরিন জাহান",
         age: 30,
         bloodGroup: "B+",
-        mobile: "+880 1012-012345",
+        mobile: "+8801012-012345",
         lastDonation: "2024-02-01",
         location: "Kashipur",
         available: true
@@ -107,7 +107,7 @@ const donors = [
         name: "আরিফুল হক",
         age: 28,
         bloodGroup: "O+",
-        mobile: "+880 0912-123456",
+        mobile: "+8800912-123456",
         lastDonation: "2024-01-28",
         location: "Kashipur",
         available: true
@@ -117,7 +117,7 @@ const donors = [
         name: "রেহানা পারভীন",
         age: 34,
         bloodGroup: "AB+",
-        mobile: "+880 0812-234567",
+        mobile: "+8800812-234567",
         lastDonation: "2024-02-12",
         location: "Kashipur",
         available: true
