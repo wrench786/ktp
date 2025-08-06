@@ -16,7 +16,7 @@
 
     
     --transition: all 0.3s ease;
-    --past-event-accent: #FFB347;
+    --past-event-accent: #2C786C ;
     --section-bg: #f4f8fb;
 }
 
@@ -961,4 +961,16 @@ nav a:hover {
     .no-events-card p {
         font-size: 1rem;
     }
+}
+
+.hero .btn {
+    background: #FFFFFF33 !important;
+    color: var(--white) !important;
+}
+
+/* Center buttons within card-text containers */
+.card-text .btn {
+    display: block;
+    margin: 2rem auto 0;
+    text-align: center;
 }
