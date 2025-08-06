@@ -42,15 +42,15 @@
 /* Donors Grid */
 .donors-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
     margin-top: 2rem;
 }
 
 .donor-card {
     background: var(--white);
     border-radius: var(--border-radius);
-    padding: 1.25rem;
+    padding: 1rem;
     box-shadow: var(--shadow);
     transition: var(--transition);
     position: relative;
@@ -119,7 +119,7 @@
     align-items: center;
     gap: 0.5rem;
     background: var(--bg-light);
-    padding: 0.75rem;
+    padding: 0.6rem;
     border-radius: 6px;
 }
 
@@ -132,6 +132,7 @@
     color: var(--text-dark);
     font-weight: 500;
     flex: 1;
+    font-size: 0.95rem;
     word-break: break-all;
     overflow-wrap: break-word;
 }
@@ -193,6 +194,7 @@
     flex: 1;
     color: var(--text-dark);
     font-weight: 500;
+    font-size: 1rem;
 }
 
 /* Donor Benefits */
@@ -300,6 +302,10 @@
     .emergency-contact span {
         font-size: 0.95rem;
     }
+    
+    .donor-card {
+        padding: 0.9rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -313,7 +319,7 @@
     }
     
     .donor-card {
-        padding: 1.5rem;
+        padding: 0.8rem;
     }
     
     .donor-header {
@@ -333,7 +339,7 @@
     }
     
     .contact-info span {
-        font-size: 0.85rem;
+        font-size: 1.1rem;
         min-width: 0;
         flex-basis: calc(100% - 60px);
     }
@@ -344,7 +350,7 @@
     }
     
     .emergency-contact span {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
         word-break: break-all;
         overflow-wrap: break-word;
         flex-basis: calc(100% - 80px);
