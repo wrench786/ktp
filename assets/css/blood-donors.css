@@ -339,7 +339,7 @@
     }
     
     .contact-info span {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         min-width: 0;
         flex-basis: calc(100% - 60px);
     }
