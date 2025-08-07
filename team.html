@@ -26,15 +26,34 @@
     <!-- Hero Section -->
     <section class="hero teams-hero">
         <div class="hero-content">
-            <h1>Our Dedicated Team</h1>
-            <p>Meet the passionate individuals working together to create positive change in our community</p>
-            <a href="#leadership" class="btn">Meet the Team</a>
+            <h1>আমাদের নির্বাহী পর্ষদ</h1>
+            <p>সম্প্রদায়ের কল্যাণে একযোগে কাজ করা উদ্দীপ্ত ব্যক্তিদের সঙ্গে পরিচিত হোন।</p>
+            <a href="#leadership" class="btn">দলের সদস্যদের সাথে পরিচিত হোন</a>
+        </div>
+    </section>
+
+    <!-- Team Filter Section -->
+    <section class="section">
+        <div class="filter-container">
+            <h2>দল অনুসারে সদস্যদের দেখুন</h2>
+            <div class="dropdown-filter">
+                <label for="team-filter">বিভাগ নির্বাচন করুন:</label>
+                <select id="team-filter" class="team-dropdown">
+                    <option value="all">সকল বিভাগ দেখুন</option>
+                    <option value="leadership">নির্বাহী পর্ষদ</option>
+                    <option value="education">শিক্ষা বিভাগ</option>
+                    <option value="relief">ত্রাণ ও সমাজসেবা বিভাগ</option>
+                    <option value="environment">পরিবেশ বিভাগ</option>
+                    <option value="youth">যুব উন্নয়ন বিভাগ</option>
+                    <option value="volunteer">স্বেচ্ছাসেবক দল</option>
+                </select>
+            </div>
         </div>
     </section>
 
     <!-- Leadership Team Section -->
-    <section id="leadership" class="section">
-        <h2>Leadership Team</h2>
+    <section id="leadership" class="section team-section" data-category="leadership">
+        <h2>সংস্থার নির্বাহী পর্ষদ</h2>
         <div class="card">
             <div class="card-text">
                 <h3>Executive Committee</h3>
@@ -67,49 +86,172 @@
         </div>
     </section>
 
-    <!-- Core Team Section -->
-    <section class="section">
-        <h2>Department Heads</h2>
+    <!-- Education Team Section -->
+    <section id="education" class="section team-section" data-category="education">
+        <h2>শিক্ষা বিভাগ</h2>
         <div class="card">
             <div class="card-text">
-                <h3>Our Specialized Teams</h3>
-                <p>Our dedicated department heads work tirelessly to ensure the success of our various initiatives:</p>
-                <div class="department-grid">
-                    <div class="department">
-                        <div class="dept-icon">
-                            <i class="fas fa-graduation-cap"></i>
+                <h3>Education Department</h3>
+                <p>Our education team is dedicated to providing quality education and support to students in need. They work tirelessly to ensure every child has access to educational opportunities.</p>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="assets/images/student.jpg" alt="Education Team Member 1">
+                        <h4>রাহুল আহমেদ</h4>
+                        <p class="position">শিক্ষা বিভাগের প্রধান</p>
+                        <p>Managing scholarship programs and educational support initiatives.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
                         </div>
-                        <h4>Education Department</h4>
-                        <p class="position">শিক্ষা বিভাগ</p>
-                        <ul>
-                            <li>Scholarship programs</li>
-                            <li>Educational support</li>
-                            <li>Career guidance</li>
-                        </ul>
                     </div>
-                    <div class="department">
-                        <div class="dept-icon">
-                            <i class="fas fa-tree"></i>
+                    <div class="team-member">
+                        <img src="assets/images/yo.jpg" alt="Education Team Member 2">
+                        <h4>ফাতেমা বেগম</h4>
+                        <p class="position">কার্যক্রম সমন্বয়কারী</p>
+                        <p>Coordinating educational programs and career guidance sessions.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
                         </div>
-                        <h4>Environmental Division</h4>
-                        <p class="position">পরিবেশ বিভাগ</p>
-                        <ul>
-                            <li>Tree planting initiatives</li>
-                            <li>Environmental awareness</li>
-                            <li>Clean-up drives</li>
-                        </ul>
                     </div>
-                    <div class="department">
-                        <div class="dept-icon">
-                            <i class="fas fa-hands-helping"></i>
+                    <div class="team-member">
+                        <img src="assets/images/yo2.jpg" alt="Education Team Member 3">
+                        <h4>সাবরিনা আক্তার</h4>
+                        <p class="position">শিক্ষা উপদেষ্টা</p>
+                        <p>Providing academic counseling and educational resource management.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
                         </div>
-                        <h4>Community Support</h4>
-                        <p class="position">সমাজসেবা বিভাগ</p>
-                        <ul>
-                            <li>Relief distribution</li>
-                            <li>Healthcare support</li>
-                            <li>Community outreach</li>
-                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Relief & Community Support Section -->
+    <section id="relief" class="section team-section" data-category="relief">
+        <h2>ত্রাণ ও সমাজসেবা বিভাগ</h2>
+        <div class="card">
+            <div class="card-text">
+                <h3>Relief & Community Support Department</h3>
+                <p>Our relief team provides essential support to communities in need, including disaster relief, healthcare support, and community outreach programs.</p>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="assets/images/burger.jpg" alt="Relief Team Member 1">
+                        <h4>আব্দুল মালেক</h4>
+                        <p class="position">ত্রাণ বিভাগের প্রধান</p>
+                        <p>Leading disaster relief operations and emergency response initiatives.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="assets/images/school.jpg" alt="Relief Team Member 2">
+                        <h4>নাজমা খাতুন</h4>
+                        <p class="position">স্বাস্থ্যসেবা সমন্বয়কারী</p>
+                        <p>Coordinating healthcare support and medical assistance programs.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="assets/images/student.jpg" alt="Relief Team Member 3">
+                        <h4>মোহাম্মদ আলী</h4>
+                        <p class="position">সম্প্রদায় সংযোগ কর্মকর্তা</p>
+                        <p>Managing community outreach and local partnership programs.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Environmental Team Section -->
+    <section id="environment" class="section team-section" data-category="environment">
+        <h2>পরিবেশ বিভাগ</h2>
+        <div class="card">
+            <div class="card-text">
+                <h3>Environmental Department</h3>
+                <p>Our environmental team works to create a sustainable future through tree planting initiatives, environmental awareness campaigns, and clean-up drives.</p>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="assets/images/kawsar.jpg" alt="Environment Team Member 1">
+                        <h4>সাবরিনা ইয়াসমিন</h4>
+                        <p class="position">পরিবেশ বিভাগের প্রধান</p>
+                        <p>Leading environmental conservation and sustainability initiatives.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="assets/images/yo.jpg" alt="Environment Team Member 2">
+                        <h4>রফিক আহমেদ</h4>
+                        <p class="position">উদ্যান কর্মকর্তা</p>
+                        <p>Managing tree planting projects and green space development.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="assets/images/yo2.jpg" alt="Environment Team Member 3">
+                        <h4>আয়েশা সুলতানা</h4>
+                        <p class="position">পরিবেশ সচেতনতা কর্মকর্তা</p>
+                        <p>Conducting environmental awareness campaigns and educational programs.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Youth Development Section -->
+    <section id="youth" class="section team-section" data-category="youth">
+        <h2>যুব উন্নয়ন বিভাগ</h2>
+        <div class="card">
+            <div class="card-text">
+                <h3>Youth Development Department</h3>
+                <p>Our youth development team focuses on empowering young people through skill development, leadership training, and community engagement programs.</p>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="assets/images/toha.jpg" alt="Youth Team Member 1">
+                        <h4>তানভীর হোসেন</h4>
+                        <p class="position">যুব উন্নয়ন কর্মকর্তা</p>
+                        <p>Leading youth empowerment and leadership development programs.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="assets/images/burger.jpg" alt="Youth Team Member 2">
+                        <h4>ফারজানা আক্তার</h4>
+                        <p class="position">কর্মসংস্থান সমন্বয়কারী</p>
+                        <p>Coordinating skill development and job placement programs.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="assets/images/school.jpg" alt="Youth Team Member 3">
+                        <h4>ইমরান হোসেন</h4>
+                        <p class="position">যুব সংগঠক</p>
+                        <p>Organizing youth activities and community engagement events.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -117,11 +259,54 @@
     </section>
 
     <!-- Volunteer Section -->
-    <section class="section">
-        <h2>Join Our Team</h2>
+    <section id="volunteer" class="section team-section" data-category="volunteer">
+        <h2>স্বেচ্ছাসেবক দল</h2>
         <div class="card">
             <div class="card-text">
-                <h3>Become a Volunteer</h3>
+                <h3>Our Dedicated Volunteers</h3>
+                <p>Our volunteers are the backbone of our organization, contributing their time and skills to make a difference in our community.</p>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="assets/images/student.jpg" alt="Volunteer 1">
+                        <h4>সাদিয়া ইসলাম</h4>
+                        <p class="position">সক্রিয় স্বেচ্ছাসেবক</p>
+                        <p>Supporting education programs and community outreach initiatives.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="assets/images/yo.jpg" alt="Volunteer 2">
+                        <h4>মাহমুদ হাসান</h4>
+                        <p class="position">স্বেচ্ছাসেবক সমন্বয়কারী</p>
+                        <p>Coordinating volunteer activities and training programs.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="assets/images/yo2.jpg" alt="Volunteer 3">
+                        <h4>নুসরাত জাহান</h4>
+                        <p class="position">সামাজিক কর্মকর্তা</p>
+                        <p>Leading social work initiatives and community development projects.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Our Team Section -->
+    <section id="join" class="section">
+        <h2>আমাদের দলে যোগ দিন</h2>
+        <div class="card">
+            <div class="card-text">
+                <h3>Become a Part of Our Mission</h3>
                 <p>We're always looking for passionate individuals who want to make a difference. Join our team and help us create positive change in our community.</p>
                 <div class="benefits-grid">
                     <div class="benefit">
@@ -149,5 +334,6 @@
     </section>
 
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/team-filter.js"></script>
 </body>
 </html>
