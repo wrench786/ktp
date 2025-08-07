@@ -39,4 +39,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize - show all sections
     filterTeams('all');
+    
+    // Debug: Log all team sections and their categories
+    console.log('Team sections found:', teamSections.length);
+    teamSections.forEach(section => {
+        console.log('Section:', section.id, 'Category:', section.getAttribute('data-category'));
+    });
 });
