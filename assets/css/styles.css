@@ -163,7 +163,37 @@ nav a:hover {
 }
 
 .home-card {
-    border-left: 4px solid var(--primary-color);
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: 1px solid rgba(26, 95, 122, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.home-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid transparent;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) border-box;
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask: 
+        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    border-radius: 15px;
+    opacity: 0.3;
+}
+
+.home-card:hover::before {
+    border-width: 4px;
+    opacity: 1;
+    transition: all 0.3s ease;
 }
 
 /* Events Page Specific */
@@ -209,6 +239,34 @@ nav a:hover {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid transparent;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) border-box;
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask: 
+        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    border-radius: 15px;
+    opacity: 0.3;
+}
+
+.card:hover::before {
+    border-width: 4px;
+    opacity: 0.5;
     transition: all 0.3s ease;
 }
 
@@ -283,10 +341,46 @@ nav a:hover {
     padding: 0 1rem;
 }
 
+/* Center buttons within events container */
+.events-container .btn {
+    display: block;
+    margin: 1.5rem auto 0;
+    text-align: center;
+}
+
 .event {
     background: var(--white);
     border-radius: 15px;
     overflow: hidden;
+    position: relative;
+}
+
+.event::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid transparent;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) border-box;
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask: 
+        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    border-radius: 15px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.event:hover::before {
+    border-width: 4px;
+    opacity: 0.5;
+    transition: all 0.3s ease;
 }
 
 .event-content {
@@ -790,7 +884,6 @@ nav a:hover {
     padding: 3rem 0;
 }
 .past-event-card {
-    border-left: 6px solid var(--past-event-accent);
     background: var(--white);
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
@@ -799,6 +892,35 @@ nav a:hover {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+.past-event-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid transparent;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) border-box;
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask: 
+        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    border-radius: 15px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.past-event-card:hover::before {
+    border-width: 4px;
+    opacity: 0.5;
+    transition: all 0.3s ease;
 }
 .past-event-card:hover {
     transform: translateY(-8px) scale(1.02);
@@ -938,6 +1060,37 @@ nav a:hover {
   flex-direction: row;
   align-items: stretch;
   overflow: hidden;
+  background: linear-gradient(135deg, #f9fdfb 0%, #ecf8f4 100%);
+  position: relative;
+  border-radius: 15px;
+}
+
+.resizable-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid transparent;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) border-box;
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask: 
+        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    border-radius: 15px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.resizable-card:hover::before {
+    border-width: 4px;
+    opacity: 0.5;
+    transition: all 0.3s ease;
 }
 .resizable-card .card-details {
   flex: 1 1 50%;
@@ -962,7 +1115,6 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   padding: 2rem;
-  background: var(--white);
   position: relative;
   z-index: 1;
 }
@@ -1007,7 +1159,35 @@ nav a:hover {
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     max-width: 500px;
     margin: 0 auto;
-    border: 2px dashed var(--light-bg);
+    position: relative;
+}
+
+.no-events-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid transparent;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) border-box;
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask: 
+        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    border-radius: 15px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.no-events-card:hover::before {
+    border-width: 4px;
+    opacity: 0.5;
+    transition: all 0.3s ease;
 }
 
 .no-events-icon {
