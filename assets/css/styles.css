@@ -303,6 +303,15 @@ nav a:hover {
     padding: 1.5rem 1.5rem 0 1.5rem !important;
 }
 
+.section:nth-of-type(4) .resizable-card .card-text h4 {
+    margin-top: 0.6rem;
+}
+
+/* Reduce top padding for resizable card text - Vision & Opinion section only */
+.section:nth-of-type(4) .resizable-card .card-text {
+    padding: 0rem 1.5rem 1.5rem 1.5rem !important;
+}
+
 /* Buttons with new styling */
 .btn {
     display: inline-block;
