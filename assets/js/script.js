@@ -80,4 +80,69 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
+
+  // Phone link functionality for all pages
+  document.addEventListener('click', function(e) {
+    if (e.target.closest('.phone-link')) {
+      const phoneLink = e.target.closest('.phone-link');
+      
+      // Add visual feedback for phone link clicks
+      phoneLink.style.transform = 'scale(0.95)';
+      phoneLink.style.backgroundColor = 'rgba(26, 95, 122, 0.2)';
+      
+      setTimeout(() => {
+        phoneLink.style.transform = '';
+        phoneLink.style.backgroundColor = '';
+      }, 200);
+      
+      // Show notification for mobile users
+      if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        showNotification('Opening phone dialer...', 'info');
+      }
+    }
+  });
 });
+
+// Notification function for phone links
+function showNotification(message, type = 'info') {
+  const notification = document.createElement('div');
+  notification.className = `notification ${type}`;
+  notification.innerHTML = `
+    <i class="fas fa-${type === 'success' ? 'check-circle' : 'info-circle'}"></i>
+    <span>${message}</span>
+  `;
+  
+  // Add styles
+  notification.style.cssText = `
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: ${type === 'success' ? '#27ae60' : '#3498db'};
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  `;
+  
+  document.body.appendChild(notification);
+  
+  // Animate in
+  setTimeout(() => {
+    notification.style.transform = 'translateX(0)';
+  }, 100);
+  
+  // Remove after 3 seconds
+  setTimeout(() => {
+    notification.style.transform = 'translateX(100%)';
+    setTimeout(() => {
+      document.body.removeChild(notification);
+    }, 300);
+  }, 3000);
+}

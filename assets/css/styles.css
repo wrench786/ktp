@@ -109,6 +109,60 @@ nav a:hover {
     color: var(--white);
 }
 
+/* Phone Link Styling */
+.phone-link {
+    color: var(--primary-color) !important;
+    text-decoration: none;
+    transition: var(--transition);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    position: relative;
+}
+
+.phone-link::before {
+    content: '\f095';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 0.9em;
+    opacity: 0.8;
+    color: #1a5f7a;
+}
+
+.phone-link:hover {
+    color: var(--accent-color) !important;
+    text-decoration: underline;
+    transform: scale(1.02);
+}
+
+.phone-link:active {
+    transform: scale(0.98);
+}
+
+/* Mobile-specific phone link enhancements */
+@media (max-width: 768px) {
+    .phone-link {
+        padding: 0.3rem 0.8rem;
+        background-color: rgba(26, 95, 122, 0.1);
+        border: 1px solid rgba(26, 95, 122, 0.2);
+        border-radius: 6px;
+        font-weight: 600;
+    }
+    
+    .phone-link:hover {
+        background-color: rgba(26, 95, 122, 0.15);
+        border-color: rgba(26, 95, 122, 0.3);
+    }
+    
+    .phone-link:active {
+        background-color: rgba(26, 95, 122, 0.2);
+        transform: scale(0.95);
+    }
+}
+
 /* Page Specific Hero Sections */
 .hero {
     position: relative;

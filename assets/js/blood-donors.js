@@ -152,27 +152,27 @@ function setupEventListeners() {
         });
     });
 
-    // Copy functionality
+
+
+    // Phone link functionality
     document.addEventListener('click', function(e) {
-        if (e.target.closest('.copy-btn')) {
-            const copyBtn = e.target.closest('.copy-btn');
-            const number = copyBtn.dataset.number;
-            const text = copyBtn.dataset.text;
+        if (e.target.closest('.phone-link')) {
+            const phoneLink = e.target.closest('.phone-link');
+            const phoneNumber = phoneLink.href.replace('tel:', '');
             
-            if (number) {
-                copyToClipboard(number);
-            } else if (text) {
-                copyToClipboard(text);
-            }
-            
-            // Visual feedback
-            copyBtn.classList.add('copied');
-            copyBtn.innerHTML = '<i class="fas fa-check"></i>';
+            // Add visual feedback for phone link clicks
+            phoneLink.style.transform = 'scale(0.95)';
+            phoneLink.style.backgroundColor = 'rgba(26, 95, 122, 0.2)';
             
             setTimeout(() => {
-                copyBtn.classList.remove('copied');
-                copyBtn.innerHTML = '<i class="fas fa-copy"></i>';
-            }, 2000);
+                phoneLink.style.transform = '';
+                phoneLink.style.backgroundColor = '';
+            }, 200);
+            
+            // Show notification for mobile users
+            if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                showNotification('Opening phone dialer...', 'info');
+            }
         }
     });
 }
@@ -215,78 +215,14 @@ function createDonorCard(donor) {
             
             <div class="donor-contact">
                 <div class="contact-info">
-                    <i class="fas fa-phone"></i>
-                    <span>${donor.mobile}</span>
-                    <button class="copy-btn" data-number="${donor.mobile.replace(/\s/g, '')}">
-                        <i class="fas fa-copy"></i>
-                    </button>
+                    <a href="tel:${donor.mobile.replace(/\s/g, '')}" class="phone-link">${donor.mobile}</a>
                 </div>
             </div>
         </div>
     `;
 }
 
-// Copy to clipboard function
-async function copyToClipboard(text) {
-    try {
-        await navigator.clipboard.writeText(text);
-        showNotification('Copied to clipboard!', 'success');
-    } catch (err) {
-        // Fallback for older browsers
-        const textArea = document.createElement('textarea');
-        textArea.value = text;
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
-        showNotification('Copied to clipboard!', 'success');
-    }
-}
 
-// Show notification
-function showNotification(message, type = 'info') {
-    // Create notification element
-    const notification = document.createElement('div');
-    notification.className = `notification ${type}`;
-    notification.innerHTML = `
-        <i class="fas fa-${type === 'success' ? 'check-circle' : 'info-circle'}"></i>
-        <span>${message}</span>
-    `;
-    
-    // Add styles
-    notification.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: ${type === 'success' ? '#27ae60' : '#3498db'};
-        color: white;
-        padding: 1rem 1.5rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-        z-index: 10000;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        font-weight: 500;
-        transform: translateX(100%);
-        transition: transform 0.3s ease;
-    `;
-    
-    document.body.appendChild(notification);
-    
-    // Animate in
-    setTimeout(() => {
-        notification.style.transform = 'translateX(0)';
-    }, 100);
-    
-    // Remove after 3 seconds
-    setTimeout(() => {
-        notification.style.transform = 'translateX(100%)';
-        setTimeout(() => {
-            document.body.removeChild(notification);
-        }, 300);
-    }, 3000);
-}
 
 // Update statistics
 function updateStats() {
