@@ -14,6 +14,12 @@
     --teams-gradient: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
     --blood-gradient: linear-gradient(135deg, #206a5d 0%, #2c7873 100%);
 
+    /* Additional Variables */
+    --shadow: 0 5px 20px rgba(0,0,0,0.1);
+    --shadow-hover: 0 8px 25px rgba(0,0,0,0.15);
+    --bg-light: #f8f9fa;
+    --text-dark: #2c3e50;
+    --text-light: #6c757d;
     
     --transition: all 0.3s ease;
     --past-event-accent: #2C786C ;
@@ -316,6 +322,8 @@ nav a:hover {
     mask-composite: exclude;
     border-radius: 15px;
     opacity: 0.3;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .card:hover::before {

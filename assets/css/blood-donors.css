@@ -49,7 +49,7 @@
 
 .donor-card {
     background: var(--white);
-    border-radius: var(--border-radius);
+    border-radius: 12px;
     padding: 1rem;
     box-shadow: var(--shadow);
     transition: var(--transition);
@@ -218,6 +218,8 @@
     display: block;
     margin: 1.5rem auto 0;
     text-align: center;
+    position: relative;
+    z-index: 10;
 }
 
 .benefit {
